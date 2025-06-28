@@ -31,7 +31,7 @@ impl Logger for Worker {
     }
 
     fn info(&self, msg: &str) {
-        let full_msg = format!("{}", msg);
+        let full_msg = format!("Info: {}", msg);
         self.mapped_messages.borrow_mut().insert("Info".to_string(), msg.to_string());
         self.all_messages.borrow_mut().push(full_msg);
     }
