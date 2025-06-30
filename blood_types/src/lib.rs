@@ -52,7 +52,7 @@ impl Ord for BloodType {
     fn cmp(&self, other: &Self) -> Ordering {
         match self.antigen.cmp(&other.antigen) {
             Ordering::Equal => self.rh_factor.cmp(&other.rh_factor),
-            other_ordering => other_ordering,
+            _ => todo!(),
         }
     }
 }
